@@ -11,3 +11,20 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=magenta'
+
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+
+alias l='ls -lh'
+alias la='ls -lah'
+alias lsd='ls -d *(/)'
+alias reboot='sync;reboot'
+alias shutdown='sync;shutdown -h now'
+alias rm='nocorrect rm'
+alias sd='sudo'
+alias snano='sudo nano'
+alias virsh='EDITOR=/usr/bin/nano virsh'
+
