@@ -42,7 +42,8 @@ fi
 
 # Define prompts.
 PROMPT='%B%F{$userColor}%n%f%b@%m %B%2~%b${vcs_info_msg_0_} $ '
-  RPROMPT=''
+RPROMPT=''
+
 }
 
 prompt_minimal_setup "$@"
