@@ -28,3 +28,9 @@ alias sd='sudo'
 alias snano='sudo nano'
 alias virsh='EDITOR=/usr/bin/nano virsh'
 
+#### Place here machine specific settings:
+# ~/.config/zshrc
+
+if [[ -s "${ZDOTDIR:-$HOME}/.config/zshrc.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.config/zshrc.zsh"
+fi
