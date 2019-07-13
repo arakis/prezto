@@ -44,8 +44,8 @@ zstyle ':prezto:load' pmodule \
   'archive' \
   'autosuggestions' \
   'node' \
-  'tmux' \
   'ssh' \
+  'tmux' \
   'fasd'
 
 #
