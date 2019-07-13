@@ -42,7 +42,10 @@ TRANSFERSH_URL=https://transfer.sh
 export EDITOR=nano
 
 # because of missing highlight: https://github.com/zsh-users/zsh-autosuggestions/issues/229 
-#export TERM=xterm-256color
+# export TERM=xterm-256color
+# But this does not work. This is requied:
+# 
+# echo set -g default-terminal xterm-256color >> ~/tmux.conf
 
 #### Place here machine specific settings:
 # ~/.config/zshrc
