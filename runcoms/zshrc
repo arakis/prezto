@@ -39,7 +39,10 @@ alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
 
 TRANSFERSH_URL=https://transfer.sh
-EXPORT EDITOR=nano
+export EDITOR=nano
+
+# because of missing highlight: https://github.com/zsh-users/zsh-autosuggestions/issues/229 
+export TERM=xterm-256color
 
 #### Place here machine specific settings:
 # ~/.config/zshrc
