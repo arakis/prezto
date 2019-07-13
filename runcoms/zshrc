@@ -28,9 +28,17 @@ alias sd='sudo'
 alias snano='sudo nano'
 alias virsh='EDITOR=/usr/bin/nano virsh'
 
+TRANSFERSH_URL=https://transfer.sh
+
 #### Place here machine specific settings:
 # ~/.config/zshrc
 
 if [[ -s "${ZDOTDIR:-$HOME}/.config/zshrc.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.config/zshrc.zsh"
 fi
+
+transfer() {
+    curl --progress-bar --upload-file "$1" $TRANSFERSH_URL/$(basename "$1") | tee /dev/null;
+    echo
+}
+alias transfer=transfer
