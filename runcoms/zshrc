@@ -42,7 +42,7 @@ TRANSFERSH_URL=https://transfer.sh
 export EDITOR=nano
 
 # because of missing highlight: https://github.com/zsh-users/zsh-autosuggestions/issues/229 
-export TERM=xterm-256color
+#export TERM=xterm-256color
 
 #### Place here machine specific settings:
 # ~/.config/zshrc
