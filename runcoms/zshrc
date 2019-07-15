@@ -24,12 +24,9 @@ alias lsd='ls -d *(/)'
 alias reboot='sync;reboot'
 alias shutdown='sync;shutdown -h now'
 alias rm='nocorrect rm'
-alias sd='sudo'
+#alias sd='sudo'
 alias snano='sudo nano'
 alias virsh='EDITOR=/usr/bin/nano virsh'
-
-
-
 
 #---
 
@@ -54,3 +51,25 @@ trap onexit EXIT
 
 alias wpctl=$HOME/wp-configuration/k8s/wpctl
 alias cedit='cloudshell edit'
+
+TRANSFERSH_URL=https://transfer.sh
+export EDITOR=nano
+
+# because of missing highlight: https://github.com/zsh-users/zsh-autosuggestions/issues/229 
+# export TERM=xterm-256color
+# But this does not work. This is requied:
+# 
+# echo set -g default-terminal xterm-256color >> ~/.tmux.conf
+
+#### Place here machine specific settings:
+# ~/.config/zshrc
+
+if [[ -s "${ZDOTDIR:-$HOME}/.config/zshrc.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.config/zshrc.zsh"
+fi
+
+function transfer {
+    curl --progress-bar --upload-file "$1" $TRANSFERSH_URL/$(basename "$1") | tee /dev/null;
+    echo
+}
+alias transfer=transfer
