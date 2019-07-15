@@ -28,3 +28,29 @@ alias sd='sudo'
 alias snano='sudo nano'
 alias virsh='EDITOR=/usr/bin/nano virsh'
 
+
+
+
+#---
+
+export EDITOR='nano'
+export VISUAL='nano'
+export PAGER='less'
+
+source <(kubectl completion zsh)
+
+
+if [[ -e "/google/google-cloud-sdk/completion.zsh.inc" ]]; then
+  source "/google/google-cloud-sdk/completion.zsh.inc"
+fi
+onexit () {
+  for FILE in /google/devshell/bash_exit.google.d/*; do
+    if [ -x "$FILE" ]; then
+      "$FILE"
+    fi
+  done
+}
+trap onexit EXIT
+
+alias wpctl=$HOME/wp-configuration/k8s/wpctl
+alias cedit='cloudshell edit'

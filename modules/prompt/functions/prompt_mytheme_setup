@@ -41,7 +41,8 @@ else
 fi
 
 # Define prompts.
-PROMPT='%B%F{$userColor}%n%f%b@%m %B%2~%b${vcs_info_msg_0_} $ '
+#PROMPT='%B%F{$userColor}%n%f%b@%m %B%2~%b${vcs_info_msg_0_} $ '
+PROMPT='%B%F{$userColor}%n%f%b@cloud-shell %B%2~%b${vcs_info_msg_0_} $ '
 RPROMPT=''
 
 }

@@ -9,3 +9,7 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+if [[ -e "/google/google-cloud-sdk/path.zsh.inc" ]]; then
+  source "/google/google-cloud-sdk/path.zsh.inc"
+fi
