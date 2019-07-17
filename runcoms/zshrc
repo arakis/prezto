@@ -56,7 +56,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.config/zshrc.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.config/zshrc.zsh"
 fi
 
-transfer() {
+function transfer {
     curl --progress-bar --upload-file "$1" $TRANSFERSH_URL/$(basename "$1") | tee /dev/null;
     echo
 }
