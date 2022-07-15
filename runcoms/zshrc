@@ -61,4 +61,5 @@ function transfer {
     echo
 }
 alias transfer=transfer
-if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+if [ -f /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
